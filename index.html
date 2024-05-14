@@ -1,0 +1,1440 @@
+<h1>For the best experience, refer to the markdown <a href="https://github.com/Rajkanwars15/CSE2012-KRR/blob/main/Notes.md">file</a></h1>
+<h1 id="module-1">Module 1</h1>
+<p>Agent- Works in env, takes. input using sensors and actuators to take
+action to change env</p>
+<p>Intelligent Agent- Must sense, act, be autonomous (to some extent)
+and must be rational</p>
+<p>Rational Agent always does the right thing</p>
+<p>Table Based Agent- Action is looked up from table based on info about
+agent’s percepts</p>
+<p>Goal Based Agent-</p>
+<p>A goal directed agent needs to achieve certain goals. Such an agent
+selects its actions based on the goal it has.</p>
+<p>A goal is a description of a set of desirable states of the world.
+Goal states are often specified by a goal test which any goal state must
+satisfy.</p>
+<h2 id="types-of-knowledge-for-ai-">Types of knowledge for AI-</h2>
+<ol type="1">
+<li>objects</li>
+<li>events</li>
+<li>performance</li>
+<li>facts</li>
+<li>meta knowledge</li>
+<li>knowledge base</li>
+</ol>
+<h2 id="types-of-knowledge-">Types of Knowledge-</h2>
+<ol type="1">
+<li>Declarative- concepts, facts, objects in declarative sentence</li>
+<li>Structural- Describe relationship between concepts and objects</li>
+<li>Procedural- responsible for knowing how to do something. rule
+strategy procedure</li>
+<li>Meta- knowledge about other types of knowledge</li>
+<li>Heuristic</li>
+</ol>
+<h2 id="ai-system-components">AI System Components</h2>
+<ol type="1">
+<li>Perception</li>
+<li>Learning</li>
+<li>KRR</li>
+<li>Planning</li>
+<li>Execution</li>
+</ol>
+<h2 id="knowledge-representation-techniques">Knowledge Representation
+Techniques</h2>
+<ol type="1">
+<li>Logical Representation</li>
+<li>Production Rules</li>
+<li>Frame Representation</li>
+<li>Semantic Network Representation</li>
+</ol>
+<figure>
+<img
+src="https://prod-files-secure.s3.us-west-2.amazonaws.com/47dc3ef1-9ae5-47a8-910d-336e8ef9928a/8287cf41-7aa3-4323-ac43-7147caf3a468/Untitled.png"
+alt="Untitled" />
+<figcaption aria-hidden="true">Untitled</figcaption>
+</figure>
+<h2 id="semantic-network-representation">Semantic Network
+Representation</h2>
+<ul>
+<li>Alternative of predicate logic for knowledge representation</li>
+<li>can represent knowledge in graphical networks</li>
+<li>Network has nodes representing objects and arcs representing
+relationship between objects</li>
+</ul>
+<h3 id="types-of-relations-">Types of Relations-</h3>
+<ol type="1">
+<li>is_a</li>
+<li>Kind_of</li>
+</ol>
+<h3 id="advantages-">Advantages-</h3>
+<ol type="1">
+<li>Natural representation of knowledge</li>
+<li>Conveys meaning in transparent manner</li>
+<li>Simple. Easy to understand</li>
+</ol>
+<h3 id="disadvantages-">Disadvantages-</h3>
+<ol type="1">
+<li>More computational time at runtime</li>
+<li>Inadequate- don’t have equivalent quantifiers</li>
+<li>networks aren’t intelligent and depend on creator of the system</li>
+</ol>
+<h2 id="frames">Frames</h2>
+<ul>
+<li>Frames are more structured form of packaging knowledge, − used for
+representing objects, concepts etc.</li>
+<li>Frames are organized into hierarchies or network of frames.</li>
+<li>Lower level frames can inherit information from upper level frames
+in network.</li>
+<li>Nodes are connected using links viz., − ako / subc (links two class
+frames, one of which is subclass of other e.g., science_faculty class is
+ako of faculty class), − is_a / inst ( connects a particular instance of
+a class frame e.g., Renuka is_a science_faculty) − a_part_of (connects
+two class frames one of which is contained in other e.g., faculty class
+is_part_of department class). − Property link of semantic net is
+replaced by SLOT fields.</li>
+<li>Frames are templates – need to be filled-in in a situation – filling
+them causes the agent to undertake actions and retrieve other
+frames</li>
+<li>Frames are extensions of record datatype in databases</li>
+<li>Also very similar to object oriented processing</li>
+<li>Slots in a frame can contain – information for choosing a frame in a
+situation – relationship between this and other frames – procedures to
+carry out after various slots filled – default information to use when
+input is missing – blank slots — left blank unless required for a task –
+other frames, which gives a hierarchy</li>
+</ul>
+<h1 id="fuzzy-logic">Fuzzy Logic</h1>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Crisp Set</th>
+<th>Fuzzy Set</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>S={s</td>
+<td>s∈X}</td>
+</tr>
+<tr class="even">
+<td>Collection of elements</td>
+<td>Collection of Ordered Pairs</td>
+</tr>
+<tr class="odd">
+<td>Inclusion of an element s∈X into S is crisp i.e., has strict yes/no
+boundary</td>
+<td>Inclusion of an element s∈X into F is fuzzy i.e., if present, then
+with degree of membership</td>
+</tr>
+</tbody>
+</table>
+<h2 id="algebraic-sum">Algebraic Sum</h2>
+<p><span
+class="math display"><em>μ</em><sub><em>A</em> + <em>B</em></sub>(<em>x</em>) = <em>μ</em><sub><em>A</em></sub>(<em>x</em>) + <em>μ</em><sub><em>B</em></sub>(<em>x</em>) − <em>μ</em><sub><em>A</em></sub>(<em>x</em>)<em>μ</em><sub><em>B</em></sub>(<em>x</em>)</span></p>
+<h2 id="algebraic-product">Algebraic Product</h2>
+<p><span
+class="math display"><em>μ</em><sub><em>A</em> · <em>B</em></sub>(<em>x</em>) = <em>μ</em><sub><em>A</em></sub>(<em>x</em>) · <em>μ</em><sub><em>B</em></sub>(<em>x</em>)</span></p>
+<h2 id="bounded-sum">Bounded Sum</h2>
+<p><span
+class="math display"><em>μ</em><sub><em>A</em> ⊕ <em>B</em></sub>(<em>x</em>) = <em>m</em><em>i</em><em>n</em>(1, <em>μ</em><sub><em>A</em></sub>(<em>x</em>) + <em>μ</em><sub><em>B</em></sub>(<em>x</em>))</span></p>
+<h2 id="bounded-difference">Bounded Difference</h2>
+<p><span
+class="math display"><em>μ</em><sub><em>A</em> ⊙ <em>B</em></sub>(<em>x</em>) = <em>m</em><em>a</em><em>x</em>(0, <em>μ</em><sub><em>A</em></sub>(<em>x</em>) − <em>μ</em><sub><em>B</em></sub>(<em>x</em>))</span></p>
+<h1 id="module-2">Module 2</h1>
+<h2 id="propositional-logic">Propositional Logic</h2>
+<p>Declarative statement declaring some function</p>
+<p>Either True or False not both</p>
+<h3 id="atomic-proposition">Atomic Proposition</h3>
+<ol type="1">
+<li>Proposition that can’t be divided further</li>
+<li>Small Letters- p q r s</li>
+</ol>
+<h3 id="compound-proposition-">Compound proposition-</h3>
+<ol type="1">
+<li>Formed by combining one or more atomic propositions using
+connectors</li>
+<li>Capital Letters- P Q R S</li>
+</ol>
+<h3 id="logical-connectives">Logical Connectives</h3>
+<ol type="1">
+<li><strong>Negation (¬)</strong>: Takes one proposition and negates
+it.</li>
+<li><strong>Conjunction (∧)</strong>: Takes two propositions and returns
+true if both propositions are true.</li>
+<li><strong>Disjunction (∨)</strong>: Takes two propositions and returns
+true if at least one of the propositions is true.</li>
+<li><strong>Implication (→)</strong>: Takes two propositions and returns
+false if the first proposition is true and the second proposition is
+false; otherwise, it returns true.</li>
+<li><strong>Biconditional (↔︎)</strong>: Takes two propositions and
+returns true if both propositions have the same truth value.</li>
+</ol>
+<p><strong>Negation (¬)</strong>:</p>
+<table>
+<thead>
+<tr class="header">
+<th>P</th>
+<th>¬P</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conjunction (∧)</strong>:</p>
+<table>
+<thead>
+<tr class="header">
+<th>P</th>
+<th>Q</th>
+<th>P ∧ Q</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Disjunction (∨)</strong>:</p>
+<table>
+<thead>
+<tr class="header">
+<th>P</th>
+<th>Q</th>
+<th>P ∨ Q</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Implication (→)</strong>:</p>
+<table>
+<thead>
+<tr class="header">
+<th>P</th>
+<th>Q</th>
+<th>P → Q</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Biconditional (↔︎)</strong>:</p>
+<table>
+<thead>
+<tr class="header">
+<th>P</th>
+<th>Q</th>
+<th>P ↔︎ Q</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>These truth tables cover all the basic propositions in propositional
+logic and demonstrate the truth values of compound propositions formed
+by combining them with the basic logical connectives.</p>
+<h2 id="not-proposition">Not Proposition</h2>
+<ol type="1">
+<li>Command</li>
+<li>Question</li>
+<li>Exclamation</li>
+<li>Inconsistent</li>
+<li>Predicate</li>
+</ol>
+<h2 id="nature-of-proposition">Nature of Proposition</h2>
+<ol type="1">
+<li>Only True-
+<ol type="1">
+<li>Tautology</li>
+<li>Valid</li>
+<li>Unfalsifiable</li>
+</ol></li>
+<li>Only False-
+<ol type="1">
+<li>Contradiction</li>
+<li>Unsatisfiable</li>
+</ol></li>
+<li>True and False or Only True-
+<ol type="1">
+<li>Satisfiable</li>
+</ol></li>
+<li>True and False or Only False-
+<ol type="1">
+<li>Invalid</li>
+<li>Falsifiable</li>
+<li>Contingency</li>
+</ol></li>
+</ol>
+<h2 id="human-problem-solving">Human Problem Solving</h2>
+<p>Human problem solving is a complex cognitive process that involves
+several stages, including understanding the problem, generating
+potential solutions, evaluating these solutions, and selecting the most
+appropriate one. While humans have remarkable problem-solving abilities,
+they also face certain limitations and challenges:</p>
+<ol type="1">
+<li><strong>Limited Working Memory Capacity</strong>: Working memory,
+which stores and manipulates information temporarily, has limited
+capacity. This limitation can affect problem-solving by restricting the
+amount of information that can be processed simultaneously. As a result,
+individuals may struggle with complex problems that require juggling
+multiple pieces of information.</li>
+<li><strong>Availability of Information</strong>: Problem-solving often
+relies on the availability of relevant information. If essential
+information is missing or inaccessible, individuals may struggle to
+generate effective solutions. Moreover, biases in information
+processing, such as confirmation bias or availability bias, can distort
+problem representations and hinder effective problem-solving.</li>
+<li><strong>Functional Fixedness</strong>: Functional fixedness refers
+to the tendency to perceive objects or concepts only in their typical or
+customary functions. This cognitive bias can limit problem-solving by
+preventing individuals from considering alternative uses or
+perspectives, thus restricting the range of potential solutions.</li>
+<li><strong>Confirmation Bias</strong>: Confirmation bias is the
+tendency to search for, interpret, or prioritize information that
+confirms one’s preconceptions or hypotheses while ignoring or
+undervaluing contradictory evidence. This bias can lead individuals to
+overlook alternative solutions or prematurely dismiss promising options,
+hindering effective problem-solving.</li>
+<li><strong>Cognitive Load</strong>: Problem-solving tasks often require
+cognitive resources such as attention, concentration, and mental effort.
+High cognitive load, resulting from complex problem structures or
+distractions, can impair problem-solving performance by overwhelming
+cognitive resources and reducing the capacity for focused
+processing.</li>
+<li><strong>Emotional Factors</strong>: Emotional states, such as
+stress, anxiety, or frustration, can influence problem-solving
+abilities. Negative emotions may impair cognitive functions, such as
+decision-making and creative thinking, thereby impeding effective
+problem-solving. Conversely, positive emotions can enhance cognitive
+flexibility and problem-solving efficacy.</li>
+<li><strong>Expertise and Experience</strong>: Problem-solving abilities
+are influenced by individuals’ levels of expertise and domain-specific
+knowledge. Novices may struggle with unfamiliar problems or lack
+effective problem-solving strategies, whereas experts can draw on their
+extensive experience and knowledge to approach problems more
+efficiently.</li>
+<li><strong>Cognitive Biases and Heuristics</strong>: Humans often rely
+on cognitive shortcuts, or heuristics, to simplify decision-making and
+problem-solving. While heuristics can expedite problem-solving, they can
+also introduce biases and lead to suboptimal outcomes. For example, the
+availability heuristic may cause individuals to overestimate the
+likelihood of events that are easily recalled from memory, leading to
+errors in judgment.</li>
+</ol>
+<aside>
+<p>💡 ⬇️ <strong>STUDY</strong></p>
+</aside>
+<h2 id="search">Search</h2>
+<ol type="1">
+<li>Blind - Linear, Binary, BFS, DFS</li>
+<li>Heuristic- A*</li>
+</ol>
+<h3 id="state-space-search">State Space Search</h3>
+<p>N-Queens</p>
+<table>
+<thead>
+<tr class="header">
+<th>4 Queens</th>
+<th>2 4 1 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5 Queens</td>
+<td>2 4 1 3 5</td>
+</tr>
+<tr class="even">
+<td>6 Queens</td>
+<td>2 4 6 1 3 5</td>
+</tr>
+<tr class="odd">
+<td>7 Queens</td>
+<td>2 4 6 1 3 5 7</td>
+</tr>
+<tr class="even">
+<td>8 Queens</td>
+<td>2 4 6 8 3 1 7 5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="search-problem">Search Problem</h3>
+<p>The search problem is to find a sequence of actions which transforms
+the agent from the initial state to a goal state g∈G. A search problem
+is represented by a 4-tuple {S, s0, A, G}. S: set of states s0 ∈ S :
+initial state A: SÆ S operators/ actions that transform one state to
+another state G : goal, a set of states. G ⊆ S</p>
+<p>Algo-</p>
+<ol type="1">
+<li>Check current state</li>
+<li>Execute allowable actions to find successor states</li>
+<li>Pick one of the states</li>
+<li>Check if new state is solution</li>
+<li>If not, new state is current state and repeat 1-4</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>BFS</th>
+<th>DFS</th>
+<th>DFID</th>
+<th>Bidirectional</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Time</td>
+<td>b^d</td>
+<td>b^d</td>
+<td>b^d</td>
+<td>b^(d/2)</td>
+</tr>
+<tr class="even">
+<td>Space</td>
+<td>b^d</td>
+<td>b*m</td>
+<td>b*d</td>
+<td>b^(d/2)</td>
+</tr>
+<tr class="odd">
+<td>Optimum</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Complete</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="breadth-first-search">Breadth First Search</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Loop</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> fringe <span class="kw">is</span> empty </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> failure</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Node <span class="op">&lt;-</span> remove<span class="op">-</span>first(fringe)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> Node <span class="kw">is</span> goal</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> path <span class="im">from</span> initial state to node</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> generate <span class="bu">all</span> successors of Node</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>merge newly generated Nodes into back of fringe</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>End Loop</span></code></pre></div>
+<h3 id="depth-first-search">Depth First Search</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Loop</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> fringe <span class="kw">is</span> empty </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> failure</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>Node <span class="op">&lt;-</span> remove<span class="op">-</span>first(fringe)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> Node <span class="kw">is</span> goal</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> path <span class="im">from</span> initial state to node</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> generate <span class="bu">all</span> successors of Node</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>merge newly generated Nodes into front of fringe</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>End Loop</span></code></pre></div>
+<h3 id="depth-limited-search">Depth Limited Search</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Loop</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> fringe <span class="kw">is</span> empty </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> failure</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>Node <span class="op">&lt;-</span> remove<span class="op">-</span>first(fringe)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> Node <span class="kw">is</span> goal</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> path <span class="im">from</span> initial state to node</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> <span class="cf">if</span> depth of node <span class="op">=</span> limit</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> cutoff</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>add generated nodes to front of fringe</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>End Loop</span></code></pre></div>
+<h3 id="limitations-of-search">Limitations of Search</h3>
+<ol type="1">
+<li><strong>Exponential Growth</strong>: In many problem spaces, the
+number of possible states or solutions grows exponentially with problem
+size. Exhaustive search algorithms may become computationally infeasible
+or impractical when faced with large search spaces, leading to long
+computation times or even computational intractability.</li>
+<li><strong>Incomplete or Imperfect Information</strong>: In real-world
+problem-solving scenarios, information may be incomplete, uncertain, or
+subject to noise. In such cases, search algorithms may struggle to find
+optimal solutions or may need to explore alternative strategies, such as
+probabilistic inference or approximate reasoning.</li>
+<li><strong>Local Optima</strong>: In optimization problems, search
+algorithms may become trapped in local optima, where further exploration
+fails to improve the solution. Escaping local optima often requires the
+use of metaheuristic techniques, such as simulated annealing or genetic
+algorithms, which enable more exploratory search behavior.</li>
+<li><strong>Curse of Dimensionality</strong>: The curse of
+dimensionality refers to the exponential increase in search space size
+as the number of dimensions or problem variables grows. High-dimensional
+search spaces pose challenges for traditional search algorithms, as they
+may require exponentially more computational resources to explore
+effectively.</li>
+<li><strong>Search Cost and Efficiency</strong>: Search algorithms incur
+computational costs, including time and memory requirements, which can
+limit their applicability in resource-constrained environments.
+Balancing search efficiency with solution quality is essential for
+developing practical problem-solving systems.</li>
+<li><strong>Heuristic Evaluation and Selection</strong>: Effective
+search algorithms often rely on heuristic evaluation functions to guide
+the search process efficiently. However, designing effective heuristics
+that accurately estimate the quality of potential solutions can be
+challenging and may require domain-specific expertise.</li>
+<li><strong>Search Space Structure</strong>: The structure of the search
+space, including its topology and connectivity, can significantly impact
+the performance of search algorithms. Irregular or deceptive search
+space structures may impede search progress and necessitate specialized
+search strategies tailored to the problem domain.</li>
+<li><strong>Dynamic Environments</strong>: Search problems in dynamic or
+changing environments pose additional challenges, as the optimal
+solution may evolve over time. Adapting search algorithms to dynamically
+changing conditions or incorporating real-time feedback is crucial for
+maintaining solution quality in dynamic environments.</li>
+</ol>
+<h1 id="module-3">Module 3</h1>
+<h2 id="foundations-of-logic-programming">Foundations of Logic
+Programming</h2>
+<ol type="1">
+<li><strong>Logical Inference</strong>: Logic programming is based on
+the principles of logical inference, where logical statements (facts and
+rules) are used to derive new conclusions through logical deduction.
+This foundation enables logic programming languages like Prolog to
+perform automated reasoning.</li>
+<li><strong>Declarative Semantics</strong>: Logic programming emphasizes
+a declarative semantics, where programs specify what should be computed
+rather than how it should be computed. This declarative approach allows
+for concise program specifications and facilitates automated
+reasoning.</li>
+<li><strong>Horn Clause Logic</strong>: Logic programming is often based
+on Horn clause logic, a subset of predicate calculus characterized by
+rules with at most one positive literal. This restriction simplifies the
+inference process and enables efficient implementation of logic
+programming languages.</li>
+<li><strong>Resolution Principle</strong>: The resolution principle, a
+fundamental principle of logic, forms the basis of inference in logic
+programming. It involves the application of resolution rules to derive
+new logical conclusions by resolving conflicting literals.</li>
+<li><strong>Computational Complexity</strong>: The foundations of logic
+programming also consider computational complexity aspects, such as the
+complexity of inference algorithms and the trade-offs between
+expressiveness and efficiency in logic programming languages. These
+considerations are essential for designing efficient logic programming
+systems.</li>
+</ol>
+<h2 id="advantage-of-predicate-calculus">Advantage of predicate
+calculus</h2>
+<ol type="1">
+<li><strong>Expressiveness</strong>: Predicate calculus allows for the
+precise specification of relationships between objects using predicates,
+functions, and variables. This expressive power enables the
+representation of complex relationships and allows for the formulation
+of sophisticated logical rules.</li>
+<li><strong>Formalism</strong>: Predicate calculus provides a rigorous
+and formal framework for reasoning about relationships and making
+deductions. This formalism ensures clarity and precision in the
+representation and manipulation of logical statements.</li>
+<li><strong>Inference</strong>: Predicate calculus supports various
+inference mechanisms, including deduction, induction, and abduction,
+which are essential for automated reasoning systems like Prolog. These
+inference mechanisms enable the derivation of new logical conclusions
+from existing knowledge bases.</li>
+<li><strong>Modularity</strong>: Predicate calculus facilitates the
+modular construction of logical systems by allowing the decomposition of
+complex problems into smaller, more manageable components. This
+modularity enhances the maintainability and scalability of logic-based
+systems.</li>
+<li><strong>Compatibility with Mathematics</strong>: Predicate calculus
+serves as the foundation for many mathematical theories, including set
+theory and model theory. Its compatibility with mathematics enables the
+integration of logical reasoning with mathematical analysis and formal
+methods.</li>
+</ol>
+<h2 id="prolog-as-a-deductive-database">Prolog as a deductive
+database</h2>
+<p>Prolog is often used as a deductive database due to its foundation in
+logic programming and its ability to represent and query relationships
+between entities using logical predicates and rules. Here’s how Prolog
+serves as a deductive database:</p>
+<ol type="1">
+<li><strong>Logical Representation</strong>: In Prolog, data is
+represented using logical facts and rules. Facts assert relationships
+between entities, while rules specify logical implications or conditions
+for deriving new facts. This logical representation allows Prolog to
+function as a database for storing and querying structured
+information.</li>
+<li><strong>Querying with Predicates</strong>: Prolog provides a
+querying mechanism based on logical predicates. Users can pose queries
+to the Prolog system, asking for information or solutions that satisfy
+certain conditions. Prolog then searches its database of facts and rules
+to find solutions that match the query criteria.</li>
+<li><strong>Inference Engine</strong>: Prolog’s inference engine employs
+logical reasoning to derive new facts from existing ones. When a query
+is posed, Prolog uses logical inference, including unification and
+backtracking, to find solutions by applying rules and matching facts in
+its database.</li>
+<li><strong>Logical Rules for Deduction</strong>: In addition to
+representing static relationships between entities, Prolog allows the
+definition of logical rules that describe deductive relationships. These
+rules specify conditions under which new facts can be inferred based on
+existing knowledge. Prolog’s inference engine then applies these rules
+to derive new information as needed.</li>
+<li><strong>Dynamic Database Modification</strong>: Prolog supports
+dynamic modification of its database during runtime. Users can assert
+new facts or retract existing ones, allowing the database to evolve over
+time in response to changing requirements or new information.</li>
+</ol>
+<h2 id="logic-programming-languages">Logic Programming Languages</h2>
+<ol type="1">
+<li>SYCL</li>
+<li>Datalog</li>
+<li>FuzzyClips</li>
+<li>Parlog</li>
+<li>Prolog++</li>
+<li>ROOP</li>
+</ol>
+<h2 id="prolog-programming-for-logic-programming">Prolog Programming for
+logic programming</h2>
+<p>Prolog is a powerful programming language for logic programming,
+offering features tailored to express and manipulate logical
+relationships. Here are some key aspects of Prolog programming:</p>
+<ol type="1">
+<li><strong>Declarative Syntax</strong>: Prolog programs are written in
+a declarative syntax that emphasizes the specification of logical
+relationships and rules rather than procedural steps. This declarative
+nature makes Prolog programs concise and easy to understand, focusing on
+what needs to be achieved rather than how.</li>
+<li><strong>Logical Inference</strong>: Prolog programs rely on logical
+inference to derive solutions to queries. Prolog’s inference engine
+employs mechanisms such as unification and backtracking to search for
+solutions by matching query patterns against the available facts and
+rules.</li>
+<li><strong>Pattern Matching</strong>: Prolog supports pattern matching,
+allowing for the unification of terms and variables based on their
+structures. This feature enables powerful querying and inference
+capabilities by matching query patterns against the available knowledge
+base.</li>
+<li><strong>Recursive Programming</strong>: Prolog facilitates recursive
+programming, allowing predicates to call themselves recursively to solve
+problems of varying complexity. Recursive programming is particularly
+useful for tasks such as tree traversal, list manipulation, and solving
+problems with recursive structures.</li>
+<li><strong>Built-in Predicates</strong>: Prolog provides a rich set of
+built-in predicates for common tasks such as arithmetic operations,
+input/output, list manipulation, and control flow. These built-in
+predicates enhance the expressiveness and utility of Prolog
+programs.</li>
+<li><strong>Meta-Programming</strong>: Prolog supports meta-programming
+techniques, allowing programs to analyze and generate Prolog code
+dynamically. Meta-programming enables the development of flexible and
+customizable Prolog applications that can adapt to changing requirements
+at runtime.</li>
+</ol>
+<h2 id="module-4">Module 4</h2>
+<p>problems:</p>
+<ul>
+<li><label><input type="checkbox" />usage of functions</label></li>
+<li>[ ]</li>
+</ul>
+<p>Theory:</p>
+<ul>
+<li><label><input type="checkbox" />Applications</label></li>
+<li><label><input type="checkbox" />working of Lisp</label></li>
+<li>[ ]</li>
+</ul>
+<h2 id="advantages-of-lisp">Advantages of Lisp</h2>
+<ul>
+<li>Recursion: A program can call itself as a subroutine</li>
+<li>Garbage Collection: Data storage is automatically recycled.</li>
+<li>Uniform Representation: Programs and data look the same.
+<ul>
+<li>Programs can examine other programs.</li>
+<li>Programs can write programs.</li>
+<li>Programs can modify themselves Programs “’learn”.</li>
+<li>Data structures can contain programs.</li>
+</ul></li>
+<li>Interaction: User can combine program writing, compilation, testing,
+debugging, running in a single interactive session.</li>
+</ul>
+<blockquote>
+<p>“Il you want to do A.I, and you don’t start with Lisp, you will have
+to reinvent it.”</p>
+</blockquote>
+<p>This statement reflects the historical significance of Lisp in the
+development of artificial intelligence (A.I.). Lisp, a high-level
+programming language, was specifically designed for symbolic computation
+and list processing. When A.I. was in its nascent stages, Lisp emerged
+as the language of choice due to its flexibility, dynamic typing, and
+powerful features such as symbolic expression manipulation.</p>
+<p>Here are some justifications for the statement:</p>
+<ol type="1">
+<li><strong>Lisp’s Deep Integration with A.I. Research</strong>: Lisp
+has been deeply integrated into the field of A.I. since its inception in
+the late 1950s. Many fundamental A.I. algorithms, such as those for
+symbolic reasoning, planning, and natural language processing, were
+first implemented in Lisp. As a result, Lisp became the lingua franca of
+A.I. research for decades.</li>
+<li><strong>Expressiveness and Flexibility</strong>: Lisp’s syntax is
+based on symbolic expressions (S-expressions), which make it well-suited
+for representing and manipulating symbolic data – a key aspect of many
+A.I. tasks. Its homoiconicity (code is represented as data) allows for
+powerful metaprogramming techniques, facilitating the creation of
+domain-specific languages and complex A.I. systems.</li>
+<li><strong>Dynamic Typing and Automatic Memory Management</strong>:
+Lisp’s dynamic typing and garbage collection simplify the development
+process, enabling rapid prototyping and experimentation, which are
+crucial in A.I. research. These features reduce the cognitive overhead
+associated with manual memory management and type declarations, allowing
+researchers to focus more on the A.I. algorithms themselves.</li>
+<li><strong>Macro System</strong>: Lisp’s macro system enables
+developers to extend the language itself, allowing for the creation of
+domain-specific abstractions and optimizations. This capability is
+particularly valuable in A.I., where custom data structures, control
+flow constructs, and optimization techniques are often required to
+tackle specific problems effectively.</li>
+<li><strong>Community and Legacy Code</strong>: Over the decades, Lisp
+has amassed a rich ecosystem of libraries, frameworks, and tools
+tailored for A.I. development. Additionally, many seminal A.I. research
+projects and systems have been implemented in Lisp. Starting with Lisp
+gives access to this wealth of existing code and expertise, saving
+developers from reinventing the wheel.</li>
+</ol>
+<h3 id="lisp-data">Lisp Data</h3>
+<p>Symbols (also called atomic Symbols or atoms):</p>
+<p>Up to 30 characters, beginning with a letter, followed by letters,
+numbers, and some special characters.</p>
+<p>MASS C8102 THISISAVERYLONGATOM</p>
+<p>Special characters that should not be included in ATOM names include,
+_“*”</p>
+<ul>
+<li>Numbers (numeric atoms): Integers (whole numbers) and floating-point
+numbers.</li>
+<li>S-Expressions (symbolic expressions): these are defined recursively
+as follows:
+<ul>
+<li>An atom is an S-Expression.</li>
+<li>If x1….xn are S-Expression (x1….xn) is called a list of x1…xn.</li>
+</ul></li>
+</ul>
+<h3 id="applications-of-lisp">Applications of Lisp</h3>
+<ul>
+<li>Artificial Intelligence</li>
+<li>Symbolic Algebraic Manipulation</li>
+<li>Natural Language Understanding</li>
+<li>Machine Translation</li>
+<li>Formal Logical Reasoning</li>
+<li>Expert Systems:
+<ul>
+<li>Diagnosis</li>
+<li>Identification</li>
+<li>Design</li>
+</ul></li>
+<li>Automatic Programming</li>
+<li>Robotics</li>
+<li>Perception (Vision, Speech Understanding)</li>
+</ul>
+<p>In Lisp, <code>setq</code> is used to set the value of a variable. It
+expects its first argument to be a symbol, not an evaluated value.
+<code>setf</code>, on the other hand, is more versatile. It can set the
+value of a variable, but it can also modify elements of data structures,
+such as arrays and lists, or even replace parts of strings.</p>
+<p>The single quote (<code>'</code>) in Lisp is used for quoting, which
+prevents the evaluation of an expression. For instance,
+<code>'(1 2 3)</code> is a list of three numbers, not a function call to
+<code>1</code> with arguments <code>2</code> and <code>3</code>.</p>
+<p>In contrast, the asterisk (<code>*</code>) in Lisp has no special
+standalone meaning, but when used as a prefix in a symbol name (like
+<code>*var*</code>), it is a naming convention indicating that the
+variable is intended to be global or special.</p>
+<p>In the context of programming, “get” and “set” are often used to
+refer to operations that retrieve and change, respectively, the value of
+a variable or property.</p>
+<p>A “get” operation typically takes the name of a variable or property
+as an argument and returns its current value. It does not change the
+state of the system.</p>
+<p>A “set” operation, on the other hand, typically takes both the name
+of a variable or property and the new value to be assigned to it. It
+changes the state of the system by updating the value of the variable or
+property.</p>
+<p>In the context of Lisp, as shown in this document, ‘SET’ and ‘SETQ’
+are used to assign a value to a symbol, with ‘SETQ’ automatically
+quoting its first argument. ‘GET’ is used in conjunction with ‘QUOTE’ to
+retrieve the value associated with a symbol.</p>
+<h3 id="computation-in-lisp">Computation in Lisp</h3>
+<p>All computation in Lisp is done by means of function calls. A
+function call is specified as a list consisting of the function name
+followed by the arguments of the function; this is sometimes referred to
+as “Cambridge Polish” notation.</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(<span class="op">+</span> <span class="dv">2</span> <span class="dv">2</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>(<span class="op">+</span> <span class="dv">3</span> (<span class="op">*</span> <span class="dv">4</span> <span class="dv">5</span>))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>(PRINT &#39;(HI MOM) )</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>(<span class="op">*</span> <span class="fl">3.1415926</span> (EXPT R <span class="dv">2</span>))</span></code></pre></div>
+<p>These are expressions written in Lisp programming language. They
+perform various operations:</p>
+<ol type="1">
+<li>Adds 2 and 2.</li>
+<li>Adds 3 and the result of multiplying 4 and 5.</li>
+<li>Prints the list containing the words ‘HI’ and ‘MOM’.</li>
+<li>Multiplies the constant Pi (represented as a decimal) by the result
+of raising a variable ‘R’ to the power of 2.</li>
+</ol>
+<p>In most cases, the arguments of the function are evaluated before the
+function is called. For example, in evaluating (+ 3 (* 45)) the argument
+(* 4 5) is evaluated to give 20, and the function + is then applied to
+the arguments 3 and</p>
+<h3 id="uniformity-of-syntax">Uniformity of Syntax</h3>
+<p>In Lisp, all computation is done by function calls. A function call
+is written ns n list, with the function name first and arguments
+following.</p>
+<p><strong>FORTRAN</strong></p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode fortran"><code class="sourceCode fortranfixed"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>SORT (<span class="fl">2.0</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>X <span class="kw">=</span> <span class="dv">2</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>x <span class="kw">=</span> <span class="dv">2</span> <span class="kw">+</span> <span class="dv">2</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">PRINT</span> <span class="fl">1.</span> X</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">IF</span>(X GT. Y) Y <span class="kw">=</span> <span class="dv">3</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>GD <span class="kw">TO</span> <span class="dv">10</span></span></code></pre></div>
+<p><strong>LISP</strong></p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>(SQRT <span class="fl">2.0</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>(SETQ X <span class="dv">2</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>(SETQ X (<span class="op">+</span> <span class="dv">2</span> <span class="dv">2</span>))</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>(PRINT X)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>(COND ((<span class="op">&gt;</span> X Y)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>(SETQ Y <span class="dv">3</span>))</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>(GO <span class="dv">10</span>)</span></code></pre></div>
+<p>As these examples suggest, it is possible to “write Fortran In LISP
+syntax.” However, Lisp permits more elegant ways of writing many
+applications</p>
+<h3 id="quotation">Quotation</h3>
+<p>A Symbol (atom) in Lisp can have a value, also called Its binding.
+There must be a way to distinguish the symbol itscif from its value. In
+English these are not formally distinguished.</p>
+<blockquote>
+<p>The President 1s the chief executive. The President’s wife is
+Nancy.</p>
+</blockquote>
+<p>In Lisp, we denote the symbol itself by Quoting it with a
+single-quote symbol.</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(GET PRESIDENT DUTIES)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>(GET PRESIDENT SPOUSE)</span></code></pre></div>
+<p>Quoting can also be accomplished by the pseudo-function</p>
+<p>QUOTE</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>QUOTE:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>(GET (QUOTE PRESIDENT)(QUOTE DUTIES))</span></code></pre></div>
+<p>Quoting an S-Expression causes everything inside it to be quoted as
+well</p>
+<p>An S-Expression (Symbolic Expression) is a form of notation for
+nested list (tree-structured) data, invented for and popularized by the
+programming language Lisp, which uses them for source code as well as
+data.</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>(THIS QUOTES (ALL (THIS STUFF)))</span></code></pre></div>
+<h3 id="variable-values-in-lisp">Variable Values in Lisp</h3>
+<p>We can think of a symbol (atom) as being a dala structure that
+includes a value cell containing a pointer to the value of the atom. The
+value of the alom cau be set using tho function SET:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>(SET PRESIDENT <span class="dt">&#39;JEFFERSON</span>)</span></code></pre></div>
+<p>If we now evaluate PRESIDENT, we will get the value JEFFERSON.</p>
+<p>Since we almost always want to quote the first argument of SET, there
+is a special function SETQ that automatically does this.</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>(SET PRESIDENT <span class="dt">&#39;JEFFERSON</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>(SETO PI <span class="fl">3.</span> <span class="dv">1415926</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>(SETO RADIUS <span class="fl">5.0</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>（ PI （EXPT RADIUE <span class="dv">2</span>））</span></code></pre></div>
+<h3 id="constructing-lists">Constructing Lists</h3>
+<p>An important feature of Lisp for Al applications is the ability to
+construct new symbolic structures of arbitrary size and complexity at
+runtime. A new list structure with a fixed number of elements can be
+made using the function LIST. To make a list of items x1 … xn use the
+form:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>(LIST X1 .... Xn)</span></code></pre></div>
+<p>Each argument of LIST is evaluated unless it is quoted.</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>(LIST <span class="dt">&#39;X</span> <span class="dt">&#39;Y</span> <span class="dt">&#39;Z</span>) <span class="op">=</span> (X Y Z)</span></code></pre></div>
+<h3 id="extracting-parts-of-lists">Extracting Parts of Lists</h3>
+<p>Lists can be taken apart by the functions CAR and CDR:</p>
+<ul>
+<li>CAR returns the first element of a list.</li>
+<li>CDR returns the rest of a list after the first element.</li>
+</ul>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>(CAR &#39;(A B C)) <span class="op">=</span> A</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>(CAR &#39;((A) B C)) <span class="op">=</span> (A)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>(CAR (CAR &#39;((A) B C))) <span class="op">=</span> A</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>(CAR <span class="dt">&#39;A</span>) <span class="op">=</span> Error: A is <span class="kw">not</span> a <span class="dv">1</span>ist.</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>(CDR &#39;(A B C)) <span class="op">=</span> (В С)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>(CDR &#39;((A) B C)) <span class="op">=</span> (B C)</span></code></pre></div>
+<h3 id="constructing-list-structure">Constructing List Structure</h3>
+<p>The basic function that constructs now list structure is the function
+CONS IlY is a list, then we can think of (CONS X Y) as adding the new
+element X to the front of the list Y.</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>(CONS <span class="dt">&#39;A</span>（B））= (A B)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>(CONS <span class="dt">&#39;A</span> NIL) <span class="op">=</span> (A)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>(CONS <span class="dt">&#39;A</span> &#39;()) <span class="op">=</span> (A)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>(CONS  &#39;(A) &#39;(B)) <span class="op">=</span> ((A) B)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>(CONS <span class="dt">&#39;A</span> <span class="dt">&#39;B</span>) <span class="op">=</span> (A . B)</span></code></pre></div>
+<p>In Lisp, the function <code>CONS</code> is used to create a new list
+by appending an element to the front of an existing list. The expression
+<code>(CONS 'A 'B)</code> results in <code>(A . B)</code>, which is not
+a typical list but a special form of Lisp data structure called a “cons
+cell” or “dotted pair”.</p>
+<p>In a standard Lisp list, <code>CONS</code> expects the second
+argument to be a list. For example, <code>(CONS 'A '(B C))</code> would
+result in <code>(A B C)</code>. However, if the second argument to
+<code>CONS</code> is not a list (as in our case, where ‘B’ is an atom,
+not a list), Lisp creates a “dotted pair”.</p>
+<p>The dot (<code>.</code>) in <code>(A . B)</code> signifies that ‘A’
+and ‘B’ are the two parts of a cons cell, with ‘A’ being the
+<code>CAR</code> (the first element) and ‘B’ being the <code>CDR</code>
+(the second element). This is used in situations where you want pairs of
+items, instead of a traditional list structure.</p>
+<h3 id="list-manipulation-functions">List Manipulation Functions</h3>
+<p>APPEND makes a new list consisting of the members of its angument
+lists appended together. APPEND takes any number of arguments.</p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>(APPEND &#39;(A) &#39;(B)) <span class="op">=</span> (A B)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>(APPEND &#39;(A B) &#39;(C D)) <span class="op">=</span> (A B C D)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>(APPEND &#39;(A) &#39;(B) &#39;(C)) <span class="op">=</span> (A B C)</span></code></pre></div>
+<p>REVERSE makes a new list that is the reverse of the list given as its
+argument.</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>（REVERSE &#39;(A B））= (B A)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>(REVERSE &#39;((A B) (C D))) <span class="op">=</span> ((C D) (A B))</span></code></pre></div>
+<h3 id="evaluation">Evaluation</h3>
+<p>Evaluation is the process by which Lisp determines the tail of an
+expression. Expressions are evaluated using the following recursive
+algorithm:</p>
+<ol type="1">
+<li>Il the expression to be evaluated is a Number, T, or NIL, its value
+is the expression itself.</li>
+<li>If the expression is (QUOTE x), Its value is x.</li>
+<li>Il the expression is a symbol (atom), its value is the value of the
+symbol (the symbol’s binding).</li>
+<li>Otherwise, the expression must be a function call:
+<ol type="1">
+<li>Evaluate each argument of the function call, in order.</li>
+<li>Call the function with the resulting values of its arguments.</li>
+<li>The value returned by the function is the value of the
+expression.</li>
+</ol></li>
+</ol>
+<h3 id="code-for-converting-celsius-to-fahrenheit">Code for converting
+Celsius to Fahrenheit</h3>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode lisp"><code class="sourceCode commonlisp"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">defun</span><span class="fu"> celsius-to-fahrenheit </span>(celsius)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>(<span class="op">+</span> (<span class="op">*</span> celsius <span class="dv">9</span>/5) <span class="dv">32</span>))</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co">;; Sample usage:</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>(celsius-to-fahrenheit <span class="dv">30</span>)  <span class="co">;; Expected output: 86</span></span></code></pre></div>
+<p>In Lisp, output is printed using the <code>print</code> function. The
+<code>print</code> function outputs its argument to the standard output,
+followed by a newline, and then returns the argument. In this code, no
+explicit output is printed. The value of the last evaluated expression
+in a function is its return value and is returned to the caller of the
+function. In an interactive Lisp environment, this return value is
+displayed to the user. So when <code>(celsius-to-fahrenheit 30)</code>
+is evaluated, the result <code>86</code> is displayed.</p>
+<h1 id="module-5---prolog">Module 5 - Prolog</h1>
+<h2 id="features-of-prolog">Features of Prolog</h2>
+<ol type="1">
+<li><strong>Declarative Syntax</strong>: Prolog programs are written in
+a declarative syntax, which emphasizes the specification of
+relationships and constraints rather than the procedural steps required
+to achieve a solution. This declarative nature makes Prolog programs
+concise and easy to understand.</li>
+<li><strong>Logic-Based Programming</strong>: Prolog is a logic
+programming language based on predicate calculus. It allows the
+representation of knowledge in the form of logical facts and rules,
+which can be queried to derive new conclusions.</li>
+<li><strong>Pattern Matching</strong>: Prolog supports pattern matching,
+allowing for the unification of terms and variables based on their
+structures. This feature enables powerful querying and inference
+capabilities by matching query patterns against the available knowledge
+base.</li>
+<li><strong>Backtracking</strong>: Prolog employs a backtracking search
+strategy to explore alternative solutions when attempting to satisfy a
+query. This backtracking mechanism enables Prolog to find multiple
+solutions to a problem and supports interactive exploration of the
+solution space.</li>
+<li><strong>Built-in Predicates</strong>: Prolog provides a rich set of
+built-in predicates for common tasks such as arithmetic operations,
+input/output, list manipulation, and control flow. These built-in
+predicates enhance the expressiveness and utility of Prolog
+programs.</li>
+</ol>
+<h2 id="lists">Lists</h2>
+<p>List is a data structure that can be used for different non numeric
+programming.</p>
+<p>Used to store atoms as a collection</p>
+<p>Consists of any number of items</p>
+<p>Representation- [] squared brackets</p>
+<p>First element- head. Remaining elements- tail</p>
+<h3 id="operations-">Operations-</h3>
+<ol type="1">
+<li><strong>Membership Checking</strong>: This function,
+<code>list_member(X,L)</code>, checks if an element <code>X</code> is a
+member of a list <code>L</code>. It recursively checks each element of
+the list until it finds a match or exhausts the list.</li>
+</ol>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>list_member(<span class="dt">X</span><span class="kw">,</span>[<span class="dt">X</span><span class="fu">|</span><span class="dt">_</span>])<span class="kw">.</span>  <span class="co">% The item is the head of the list</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>list_member(<span class="dt">X</span><span class="kw">,</span>[<span class="dt">_</span><span class="fu">|</span><span class="dt">TAIL</span>])<span class="kw">:-</span>  <span class="co">% The item is not the head, so check the tail</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>list_member(<span class="dt">X</span><span class="kw">,</span><span class="dt">TAIL</span>)<span class="kw">.</span></span></code></pre></div>
+<ol type="1">
+<li><strong>Length Calculation</strong>: The function
+<code>list_length(L,N)</code> calculates the length of a list
+<code>L</code>. It recursively counts the number of elements in the
+list.</li>
+</ol>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>list_length([]<span class="kw">,</span><span class="dv">0</span>)<span class="kw">.</span>  <span class="co">% An empty list has a length of 0</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>list_length([<span class="dt">_</span><span class="fu">|</span><span class="dt">L</span>]<span class="kw">,</span><span class="dt">N</span>)<span class="kw">:-</span>  <span class="co">% A non-empty list&#39;s length is 1 plus the length of the tail</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>list_length(<span class="dt">L</span><span class="kw">,</span><span class="dt">N1</span>)<span class="kw">,</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="dt">N</span> <span class="dt">is</span> <span class="dt">N1+</span><span class="dv">1</span><span class="kw">.</span></span></code></pre></div>
+<ol type="1">
+<li><strong>Concatenation</strong>: The function
+<code>list_concat(L1,L2,L3)</code> concatenates two lists
+<code>L1</code> and <code>L2</code> into a new list
+<code>L3</code>.</li>
+</ol>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>list_concat([]<span class="kw">,</span> <span class="dt">L</span><span class="kw">,</span> <span class="dt">L</span>)<span class="kw">.</span>  <span class="co">% Concatenating an empty list with another list results in the other list</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>list_concat([<span class="dt">X1</span><span class="fu">|</span><span class="dt">L1</span>]<span class="kw">,</span> <span class="dt">L2</span><span class="kw">,</span> [<span class="dt">X1</span><span class="fu">|</span><span class="dt">L3</span>]) <span class="kw">:-</span>  <span class="co">% The concatenated list is the head of the first list followed by the concatenation of the tail and the second list</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    list_concat(<span class="dt">L1</span><span class="kw">,</span> <span class="dt">L2</span><span class="kw">,</span> <span class="dt">L3</span>)<span class="kw">.</span></span></code></pre></div>
+<ol type="1">
+<li><strong>Delete Items</strong>: The function
+<code>list_delete(X,L1,L2)</code> removes an element <code>X</code> from
+a list <code>L1</code> to create a new list <code>L2</code>.</li>
+</ol>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>list_delete(<span class="dt">X</span><span class="kw">,</span>[<span class="dt">X</span>]<span class="kw">,</span>[])<span class="kw">.</span>  <span class="co">% Deleting the only item in a list results in an empty list</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>list_delete(<span class="dt">X</span><span class="kw">,</span>[<span class="dt">X</span><span class="fu">|</span><span class="dt">L1</span>]<span class="kw">,</span><span class="dt">L1</span>)<span class="kw">.</span>  <span class="co">% If the item to be deleted is the head of the list, the result is the tail</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>list_delete(<span class="dt">X</span><span class="kw">,</span>[<span class="dt">Y</span><span class="fu">|</span><span class="dt">L1</span>]<span class="kw">,</span>[<span class="dt">Y</span><span class="fu">|</span><span class="dt">L2</span>])<span class="kw">:-</span>  <span class="co">% If the item to be deleted is not the head, keep the head and delete the item from the tail</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    list_delete(<span class="dt">X</span><span class="kw">,</span><span class="dt">L2</span><span class="kw">,</span><span class="dt">L1</span>)<span class="kw">.</span></span></code></pre></div>
+<ol type="1">
+<li><strong>Append Items</strong>: The function
+<code>list_append(A,T,L)</code> adds an item <code>A</code> to a list
+<code>T</code> to create a new list <code>L</code>. If the item is
+already in the list, the original list is returned.</li>
+</ol>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>list_member(<span class="dt">X</span><span class="kw">,</span>[<span class="dt">X</span><span class="fu">|</span><span class="dt">_</span>])<span class="kw">.</span>  <span class="co">% The item is the head of the list</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>list_member(<span class="dt">X</span><span class="kw">,</span>[<span class="dt">_</span><span class="fu">|</span><span class="dt">TAIL</span>])<span class="kw">:-</span>  <span class="co">% The item is not the head, so check the tail</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>list_member(<span class="dt">X</span><span class="kw">,</span><span class="dt">TAIL</span>)<span class="kw">.</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>list_append(<span class="dt">A</span><span class="kw">,</span><span class="dt">T</span><span class="kw">,</span><span class="dt">T</span>)<span class="kw">:-</span> list_member(<span class="dt">A</span><span class="kw">,</span><span class="dt">T</span>)<span class="kw">,!.</span>  <span class="co">% If the item is already in the list, return the original list</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>list_append(<span class="dt">A</span><span class="kw">,</span><span class="dt">T</span><span class="kw">,</span>[<span class="dt">A</span><span class="fu">|</span><span class="dt">T</span>])<span class="kw">.</span>  <span class="co">% Otherwise, return a new list with the item added to the front</span></span></code></pre></div>
+<ol type="1">
+<li><strong>Insert Items</strong>: This operation would insert an
+element into a list at a specified position.</li>
+</ol>
+<p><strong>Difference between Concat, Append, and Insert</strong>:</p>
+<ul>
+<li><strong>Concatenation</strong>: This takes two lists and combines
+them end-to-end to form a new list.</li>
+<li><strong>Append</strong>: This takes an item and a list and adds the
+item to the front of the list. If the item is already in the list, the
+original list is returned.</li>
+<li><strong>Insert</strong>: This takes an item, a list, and a position,
+and adds the item to the list at the specified position. The elements
+that were at that position and after are shifted down the list.</li>
+</ul>
+<h3 id="code-1-message-display">Code 1: Message Display</h3>
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>main <span class="kw">:-</span> <span class="fu">write</span>(<span class="ot">&quot;</span><span class="er">This is a prolog program</span><span class="ot">&quot;</span>)<span class="kw">,</span> </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write</span>(<span class="ot">&quot;</span><span class="er">Hello</span><span class="ot">.</span><span class="er"> Same same but different</span><span class="ot">.</span><span class="er"> no money no honey</span><span class="ot">.&quot;</span>)<span class="kw">.</span></span></code></pre></div>
+<p>This Prolog program displays two strings when the main predicate is
+run.</p>
+<h3 id="code-2-facts-declaration">Code 2: Facts Declaration</h3>
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>cat(tom)<span class="kw">.</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>loves_to_eat(kunal<span class="kw">,</span>pasta)<span class="kw">.</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>hair(black)<span class="kw">.</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>loves_to_play_games(nawaz)<span class="kw">.</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>lazy(pratyusha)<span class="kw">.</span></span></code></pre></div>
+<p>This Prolog program declares five facts: Tom is a cat, Kunal loves to
+eat pasta, someone has black hair, Nawaz loves to play games, and
+Pratyusha is lazy.</p>
+<h3 id="code-3-family-tree-logic">Code 3: Family Tree Logic</h3>
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>parent(pat<span class="kw">,</span>jim)<span class="kw">.</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>parent(pam<span class="kw">,</span>bob)<span class="kw">.</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>parent(tom<span class="kw">,</span>bob)<span class="kw">.</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>parent(tom<span class="kw">,</span>liz)<span class="kw">.</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>parent(bob<span class="kw">,</span>ann)<span class="kw">.</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>parent(bob<span class="kw">,</span>pat)<span class="kw">.</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>female(pam)<span class="kw">.</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>female(liz)<span class="kw">.</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>female(pat)<span class="kw">.</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>female(ann)<span class="kw">.</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>male(jim)<span class="kw">.</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>male(bob)<span class="kw">.</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>male(tom)<span class="kw">.</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>male(peter)<span class="kw">.</span></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>mother(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span> parent(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">,</span> female(<span class="dt">X</span>)<span class="kw">.</span></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>father(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span> parent(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">,</span> male(<span class="dt">X</span>)<span class="kw">.</span></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>grand(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span> parent(<span class="dt">X</span><span class="kw">,</span><span class="dt">Z</span>)<span class="kw">,</span> parent(<span class="dt">Z</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">.</span></span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>grandpa(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span> grand(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">,</span> male(<span class="dt">X</span>)<span class="kw">.</span></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>grandma(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span> grand(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">,</span> female(<span class="dt">X</span>)<span class="kw">.</span></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>sibling(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span> parent(<span class="dt">Z</span><span class="kw">,</span><span class="dt">X</span>)<span class="kw">,</span> parent(<span class="dt">Z</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">.</span></span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>brother(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span> sibling(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">,</span> male(<span class="dt">X</span>)<span class="kw">.</span></span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>sister(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span> sibling(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">,</span> female(<span class="dt">X</span>)<span class="kw">.</span></span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>uncle(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span> brother(<span class="dt">X</span><span class="kw">,</span><span class="dt">Z</span>)<span class="kw">,</span> parent(<span class="dt">Z</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">.</span></span>
+<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a>aunt(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span> sister(<span class="dt">X</span><span class="kw">,</span><span class="dt">Z</span>)<span class="kw">,</span> parent(<span class="dt">Z</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">.</span></span>
+<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a>niece(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span> female(<span class="dt">X</span>)<span class="kw">,</span> parent(<span class="dt">Z</span><span class="kw">,</span><span class="dt">X</span>)<span class="kw">,</span> sibling(<span class="dt">Z</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">.</span></span>
+<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a>nephew(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span> male(<span class="dt">X</span>)<span class="kw">,</span> parent(<span class="dt">Z</span><span class="kw">,</span><span class="dt">X</span>)<span class="kw">,</span> sibling(<span class="dt">Z</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">.</span></span>
+<span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a>cousin(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span> parent(<span class="dt">Z</span><span class="kw">,</span><span class="dt">X</span>)<span class="kw">,</span> parent(<span class="dt">W</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">,</span> sibling(<span class="dt">Z</span><span class="kw">,</span><span class="dt">W</span>)<span class="kw">.</span></span></code></pre></div>
+<p>This Prolog program defines facts about a family tree and includes
+logic for determining relationships such as parent, grandparent, and
+siblings.</p>
+<h3 id="code-4-basic-calculations">Code 4: Basic Calculations</h3>
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>calc<span class="kw">:-</span> <span class="dt">X</span> <span class="dt">is</span> <span class="dv">300</span><span class="dt">+</span><span class="dv">100</span><span class="kw">,</span> <span class="fu">write</span>(<span class="st">&#39;</span><span class="er"> </span><span class="st">300+100</span><span class="er"> is </span><span class="st">&#39;</span>)<span class="kw">,</span><span class="fu">write</span>(<span class="dt">X</span>)<span class="kw">.</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>calc2<span class="kw">:-</span> <span class="dt">X</span> <span class="dt">is</span> <span class="dv">300-100</span><span class="kw">,</span> <span class="fu">write</span>(<span class="st">&#39;</span><span class="er"> </span><span class="st">300-100</span><span class="er"> is </span><span class="st">&#39;</span>)<span class="kw">,</span><span class="fu">write</span>(<span class="dt">X</span>)<span class="kw">.</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>calc3<span class="kw">:-</span> <span class="dt">X</span> <span class="dt">is</span> <span class="dv">300</span><span class="dt">*</span><span class="dv">100</span><span class="kw">,</span> <span class="fu">write</span>(<span class="st">&#39;</span><span class="er"> </span><span class="st">300+100</span><span class="er"> is </span><span class="st">&#39;</span>)<span class="kw">,</span><span class="fu">write</span>(<span class="dt">X</span>)<span class="kw">.</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>calc4<span class="kw">:-</span> <span class="dt">X</span> <span class="dt">is</span> <span class="dv">304</span><span class="fl">/</span><span class="dv">10</span><span class="kw">,</span> <span class="fu">write</span>(<span class="st">&#39;</span><span class="er"> </span><span class="st">304/10</span><span class="er"> is </span><span class="st">&#39;</span>)<span class="kw">,</span><span class="fu">write</span>(<span class="dt">X</span>)<span class="kw">.</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>calc5<span class="kw">:-</span> <span class="dt">X</span> <span class="dt">is</span> <span class="dv">304//10</span><span class="kw">,</span> <span class="fu">write</span>(<span class="st">&#39;</span><span class="er"> </span><span class="st">304//10</span><span class="er"> is </span><span class="st">&#39;</span>)<span class="kw">,</span><span class="fu">write</span>(<span class="dt">X</span>)<span class="kw">.</span></span></code></pre></div>
+<p>This Prolog program performs basic calculations (addition,
+subtraction, multiplication, division, and integer division) and
+displays the results.</p>
+<h3 id="code-5-addition-input">Code 5: Addition Input</h3>
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>calx <span class="kw">:-</span> <span class="fu">write</span>(<span class="st">&#39;</span><span class="er">Enter number</span><span class="st">:</span><span class="er"> </span><span class="st">&#39;</span>)<span class="kw">,</span> <span class="fu">read</span>(<span class="dt">Number1</span>)<span class="kw">,</span> <span class="fu">write</span>(<span class="st">&#39;</span><span class="er">Enter number</span><span class="st">:</span><span class="er"> </span><span class="st">&#39;</span>)<span class="kw">,</span> <span class="fu">read</span>(<span class="dt">Number2</span>)<span class="kw">,</span> <span class="dt">X</span> <span class="dt">is</span> <span class="dt">Number1+Number2</span><span class="kw">,</span> <span class="fu">write</span>(<span class="st">&#39;</span><span class="er">Number1 </span><span class="st">+</span><span class="er"> Number2 is </span><span class="st">&#39;</span>)<span class="kw">,</span> <span class="fu">write</span>(<span class="dt">X</span>)<span class="kw">.</span></span></code></pre></div>
+<p>This Prolog program asks the user to input two numbers and then adds
+them together.</p>
+<h3 id="code-6-power-calculation">Code 6: Power Calculation</h3>
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>calv<span class="kw">:-</span> <span class="fu">write</span>(<span class="st">&#39;</span><span class="er">Enter number</span><span class="st">:</span><span class="er"> </span><span class="st">&#39;</span>)<span class="kw">,</span> <span class="fu">read</span>(<span class="dt">Number1</span>)<span class="kw">,</span> <span class="fu">write</span>(<span class="st">&#39;</span><span class="er">Enter number</span><span class="st">:</span><span class="er"> </span><span class="st">&#39;</span>)<span class="kw">,</span> <span class="fu">read</span>(<span class="dt">Number2</span>)<span class="kw">,</span> <span class="dt">X</span> <span class="dt">is</span> <span class="dt">Number1</span><span class="fl">**</span><span class="dt">Number2</span><span class="kw">,</span> <span class="fu">write</span>(<span class="st">&#39;</span><span class="er">Number1 </span><span class="st">^</span><span class="er"> Number2 is </span><span class="st">&#39;</span>)<span class="kw">,</span> <span class="fu">write</span>(<span class="dt">X</span>)<span class="kw">.</span></span></code></pre></div>
+<p>This Prolog program asks the user to input two numbers and then
+calculates the result of the first number raised to the power of the
+second number.</p>
+<h3 id="code-7-square-root-calculation">Code 7: Square Root
+Calculation</h3>
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>calcx<span class="kw">:-</span> <span class="fu">write</span>(<span class="st">&#39;</span><span class="er">Enter number</span><span class="st">:</span><span class="er"> </span><span class="st">&#39;</span>)<span class="kw">,</span> <span class="fu">read</span>(<span class="dt">Number1</span>)<span class="kw">,</span> <span class="dt">X</span> <span class="dt">is</span> <span class="fl">sqrt</span>(<span class="dt">Number1</span>)<span class="kw">,</span> <span class="fu">write</span>(<span class="st">&#39;</span><span class="er">Square root of Number1 is</span><span class="st">:</span><span class="er"> </span><span class="st">&#39;</span>)<span class="kw">,</span> <span class="fu">write</span>(<span class="dt">X</span>)<span class="kw">.</span></span></code></pre></div>
+<p>This Prolog program asks the user to input a number and then
+calculates its square root.</p>
+<h3 id="code-8-temperature-conversion">Code 8: Temperature
+Conversion</h3>
+<p>This Prolog program takes a temperature in Fahrenheit from the user
+and then converts this temperature to Celsius.</p>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>calcv<span class="kw">:-</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(<span class="st">&#39;</span><span class="er">Enter number</span><span class="st">:</span><span class="er"> </span><span class="st">&#39;</span>)<span class="kw">,</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">read</span>(<span class="dt">Number1</span>)<span class="kw">,</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">X</span> <span class="dt">is</span> (<span class="dv">5</span><span class="fl">/</span><span class="dv">9</span>)<span class="dt">*</span>(<span class="dt">Number1</span> <span class="dt">-</span> <span class="dv">32</span>)<span class="kw">,</span> <span class="fu">//</span> <span class="dt">Conversion</span> formula</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(<span class="st">&#39;</span><span class="er"> Number1 in Celsius is </span><span class="st">&#39;</span>)<span class="kw">,</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(<span class="dt">X</span>)<span class="kw">.</span></span></code></pre></div>
+<h3 id="code-9-addition-program">Code 9: Addition Program</h3>
+<p>This Prolog program reads two numbers from the user and then adds the
+numbers together.</p>
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>det<span class="kw">:-</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(<span class="st">&#39;</span><span class="er">Enter b</span><span class="st">&#39;</span>)<span class="kw">,</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">read</span>(<span class="dt">Number1</span>)<span class="kw">,</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(<span class="st">&#39;</span><span class="er">Enter a</span><span class="st">&#39;</span>)<span class="kw">,</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">read</span>(<span class="dt">Number2</span>)<span class="kw">,</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">X</span> <span class="dt">is</span> <span class="dt">Number1+Number2</span><span class="kw">,</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(<span class="st">&#39;</span><span class="er"> Number1 </span><span class="st">+</span><span class="er"> Number2 is </span><span class="st">&#39;</span>)<span class="kw">,</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(<span class="dt">X</span>)<span class="kw">.</span></span></code></pre></div>
+<h3 id="code-10-count-to-10">Code 10: Count to 10</h3>
+<p>This Prolog program counts from a given number to 10.</p>
+<div class="sourceCode" id="cb33"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>count_to_10(<span class="dv">10</span>) <span class="kw">:-</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(<span class="dv">10</span>)<span class="kw">,</span><span class="fu">nl</span><span class="kw">.</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>count_to_10(<span class="dt">X</span>) <span class="kw">:-</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(<span class="dt">X</span>)<span class="kw">,</span><span class="fu">nl</span><span class="kw">,</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Y</span> <span class="dt">is</span> <span class="dt">X</span> <span class="dt">+</span> <span class="dv">1</span><span class="kw">,</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>    count_to_10(<span class="dt">Y</span>)<span class="kw">.</span></span></code></pre></div>
+<h3 id="code-11-even-count-to-10">Code 11: Even Count to 10</h3>
+<p>This Prolog program counts only even numbers from a given number to
+10.</p>
+<div class="sourceCode" id="cb34"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>even_count_to_10(<span class="dv">10</span>) <span class="kw">:-</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(<span class="dv">10</span>)<span class="kw">,</span> <span class="fu">nl</span><span class="kw">.</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>even_count_to_10(<span class="dt">X</span>) <span class="kw">:-</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span> <span class="dt">is</span> <span class="dt">X</span> <span class="dv">mod</span> <span class="dv">2</span><span class="kw">,</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(<span class="dt">X</span>)<span class="kw">,</span> <span class="fu">nl</span><span class="kw">,</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Y</span> <span class="dt">is</span> <span class="dt">X</span> <span class="dt">+</span> <span class="dv">2</span><span class="kw">,</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>    even_count_to_10(<span class="dt">Y</span>)<span class="kw">.</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>even_count_to_10(<span class="dt">X</span>) <span class="kw">:-</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">X1</span> <span class="dt">is</span> <span class="dt">X</span> <span class="dt">+</span> <span class="dv">1</span><span class="kw">,</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>    even_count_to_10(<span class="dt">X1</span>)</span></code></pre></div>
+<h3 id="code-12-fibonacci-series">Code 12: Fibonacci Series</h3>
+<p>This Prolog program generates a Fibonacci series until a given
+number.</p>
+<div class="sourceCode" id="cb35"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>fib(<span class="dv">1</span><span class="kw">,</span> <span class="dt">_</span><span class="kw">,</span> <span class="dt">Y</span>)<span class="kw">:-</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(<span class="dt">Y</span>)<span class="kw">,</span> <span class="fu">nl</span><span class="kw">.</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>fib(<span class="dt">N</span><span class="kw">,</span> <span class="dt">X</span><span class="kw">,</span> <span class="dt">Y</span>)<span class="kw">:-</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">N</span> <span class="dt">&gt;</span> <span class="dv">1</span><span class="kw">,</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(<span class="dt">X</span>)<span class="kw">,</span> <span class="fu">nl</span><span class="kw">,</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Z</span> <span class="dt">is</span> <span class="dt">X</span> <span class="dt">+</span> <span class="dt">Y</span><span class="kw">,</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">NextN</span> <span class="dt">is</span> <span class="dt">N</span> <span class="dt">-</span> <span class="dv">1</span><span class="kw">,</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>    fib(<span class="dt">NextN</span><span class="kw">,</span> <span class="dt">Y</span><span class="kw">,</span> <span class="dt">Z</span>)<span class="kw">.</span></span></code></pre></div>
+<h3 id="code-13-prime-number-check">Code 13: Prime Number Check</h3>
+<p>This Prolog program checks if a given number is prime or not.</p>
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode prolog"><code class="sourceCode prolog"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>divisible(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">N</span> <span class="dt">is</span> <span class="dt">Y*Y</span><span class="kw">,</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">N</span> <span class="dt">=&lt;</span> <span class="dt">X</span><span class="kw">,</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">X</span> <span class="fu">mod</span> <span class="dt">Y</span> =\\= <span class="dv">0</span><span class="kw">.</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>divisible(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">:-</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Y</span> <span class="dt">&lt;</span> <span class="dt">X</span><span class="kw">,</span></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Y1</span> <span class="dt">is</span> <span class="dt">Y+</span><span class="dv">1</span><span class="kw">,</span></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>    divisible(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y1</span>)<span class="kw">.</span></span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>isPrime(<span class="dt">X</span>)<span class="kw">:-</span></span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Y</span> <span class="dt">is</span> <span class="dv">2</span><span class="kw">,</span> <span class="dt">X&gt;</span><span class="dv">1</span><span class="kw">,</span> divisible(<span class="dt">X</span><span class="kw">,</span><span class="dt">Y</span>)<span class="kw">.</span></span></code></pre></div>
+<p>or</p>
+<div class="sourceCode" id="cb37"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPrime</span><span class="op">(</span><span class="dv">2</span><span class="op">).</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">isPrime</span><span class="op">(</span><span class="dv">3</span><span class="op">).</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">isPrime</span><span class="op">(</span>P<span class="op">)</span> <span class="op">:-</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    P <span class="op">&gt;</span> <span class="dv">3</span><span class="op">,</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>    \<span class="op">+</span> <span class="op">(</span><span class="fu">between</span><span class="op">(</span><span class="dv">2</span><span class="op">,</span> P<span class="op">,</span> X<span class="op">),</span> P mod X <span class="op">=:=</span> <span class="dv">0</span><span class="op">).</span></span></code></pre></div>
+<h1 id="a-algorithm">A* Algorithm</h1>
+<div class="sourceCode" id="cb38"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>Input: Queue<span class="op">-</span> Path only containing root</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>While(Queue <span class="kw">not</span> empty <span class="op">&amp;&amp;</span> first_path <span class="kw">not</span> reach goal) DO</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>Remove first_path <span class="im">from</span> queue</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>Create paths to <span class="bu">all</span> children</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>Reject paths <span class="cf">with</span> loops</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>Add paths <span class="kw">and</span> sort queue (by f <span class="op">=</span> cost <span class="op">+</span> heuristic)</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> queue contains path: P, Q</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="kw">and</span> P ends <span class="kw">in</span> node N <span class="op">&amp;&amp;</span> Q contains node N</span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a><span class="kw">and</span> cost(P)<span class="op">&gt;</span>cost(Q)</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>then remove P</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> goal reached</span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>Success</span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>failure</span></code></pre></div>
+<h1 id="module-6">Module 6</h1>
+<h2 id="skolemization">Skolemization</h2>
+<p>Skolemization is a process in logic that eliminates existential
+quantifiers by replacing them with new functions. It’s a crucial step in
+transforming a logical formula into a form that can be used by automated
+theorem provers.</p>
+<p>For example, given the logical statement <code>∃x ∀y P(x, y)</code>,
+the Skolemization would yield <code>∀y P(f, y)</code>, where
+<code>f</code> is a new function symbol.</p>
+<p><strong>Skolemization Algorithm:</strong></p>
+<ol type="1">
+<li>Identify the existential quantifiers in the formula.</li>
+<li>For each existential quantifier, generate a new function symbol. The
+arity (number of arguments) of this function should be equal to the
+number of universal quantifiers that are in the scope of the existential
+quantifier.</li>
+<li>Replace each instantiation of the quantified variable with the new
+function applied to the universally quantified variables in its
+scope.</li>
+<li>Remove the existential quantifier.</li>
+</ol>
+<p>Note: The resulting formula after Skolemization is not equivalent to
+the original formula, but it is equisatisfiable, meaning that it has the
+same solutions.</p>
+<h2 id="resolution-in-first-order-logic">Resolution in First Order
+Logic</h2>
+<p>Resolution is a theorem proving technique that proves by
+contradiction</p>
+<p>It is used if various statements are given and we need to prove a
+conclusion for those statements</p>
+<p>Resolution is a single inference rule that can efficiently operate in
+Conjunctive Normal Form (CNF) or clausal form</p>
+<p>Clause: Disjunction of literals</p>
+<p>CNF: Sentence represented as conjunction of classes</p>
+<h3 id="steps-for-resolution">Steps for Resolution</h3>
+<ol type="1">
+<li>Conversion of facts into FOL</li>
+<li>Convert FOL statement into CNF</li>
+<li>Negate statement which needs to be approved.</li>
+<li>Draw resolution graph (unification)</li>
+</ol>
+<h3 id="convert-to-cnf">Convert to CNF:</h3>
+<ol type="1">
+<li>Eliminate Bidirectional</li>
+<li>Eliminate implication</li>
+<li>Move negation ~ inwards</li>
+<li>Standardise variables so that each quantifier finds a unique
+variable</li>
+<li>Move all quantifiers to the front (left)</li>
+<li>Eliminate Existential quantifiers</li>
+<li>Drop Universal Quantifiers</li>
+<li>Apply Distribution Law</li>
+</ol>
+<aside>
+<p>💡 Remember this- 7 marks for steps</p>
+</aside>
+<h2 id="unification">Unification</h2>
+<p>Its all about making the expressions look identical</p>
+<p>So to make them look identical we need to do substitution</p>
+<h3 id="conditions-for-unification-">Conditions for Unification-</h3>
+<ol type="1">
+<li><p>Predicate Symbol must be same</p>
+<p>atoms or expressions with different predicate symbol can never be
+unified</p></li>
+<li><p>Number of arguments in both expressions must be same</p></li>
+</ol>
+<p>Unification is a process in logic and computer science that finds the
+common instance of two expressions, if it exists. It’s a fundamental
+part of type inference in type theory and type systems, query
+optimization in databases, and automated theorem proving in artificial
+intelligence.</p>
+<p>For example, given the expressions <code>P(x, y)</code> and
+<code>P(a, b)</code>, the unification is <code>{x/a, y/b}</code>. This
+means if we replace <code>x</code> with <code>a</code> and
+<code>y</code> with <code>b</code> in the first expression, it becomes
+equal to the second expression.</p>
+<p><strong>Unification Algorithm:</strong></p>
+<ol type="1">
+<li>Initialize an empty set of substitutions.</li>
+<li>If the two expressions to be unified are identical, return the
+current set of substitutions.</li>
+<li>If one expression is a variable and the other is a constant, or if
+one expression is a variable that occurs nowhere else in the second
+expression, add the pairing of this variable and constant to the set of
+substitutions.</li>
+<li>If one expression is a function and the other is a variable, swap
+them and repeat step 3.</li>
+<li>If both expressions are functions, unify their function names. If
+this succeeds, unify their arguments pairwise.</li>
+<li>If none of these steps apply, unification fails.</li>
+</ol>
+<h3 id="horn-normal-form">Horn Normal Form</h3>
+<aside>
+<p>💡 A clause with atmost one positive literal</p>
+</aside>
+<p>The Horn Normal Form, also known as Horn Clause Logic, is a special
+type of logical expression in propositional calculus. It is a clause
+with at most one positive literal. A literal is an atomic proposition or
+its negation.</p>
+<p>Horn clauses can be classified into three categories:</p>
+<ol type="1">
+<li>Fact: A clause that contains only a positive literal. For example,
+<code>P</code>.</li>
+<li>Rule: A clause that contains one positive literal and one or more
+negative literals. For example,
+<code>(not P or not Q or ... or R)</code>. This is typically interpreted
+as “if P and Q and …, then R”.</li>
+<li>Goal: A clause that contains only negative literals. For example,
+<code>(not P or not Q or not R)</code>. This can be interpreted as “P,
+Q, and R cannot all be true”.</li>
+</ol>
+<p>The advantage of Horn Clause Logic is that logical inference (the
+process of deriving new truths from existing ones) is simpler and more
+efficient, enabling it to be effectively implemented in logic
+programming languages such as Prolog.</p>
+<h2 id="logical-inference-">Logical Inference-</h2>
+<p>Given:</p>
+<p>a knowledge base KB (set of sentences)</p>
+<p>a sentence α (called a theorem)</p>
+<p>Approaches-</p>
+<ul>
+<li>Truth Table</li>
+<li>Inference</li>
+<li>Resolution</li>
+</ul>
+<p>KB in restricted forms- so that some of the sound inference rules
+become complete</p>
